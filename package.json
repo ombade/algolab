@@ -1,5 +1,14 @@
 {
   "dependencies": {
-    "algorithm-visualizer": "^2.3.9"
+    "algorithm-visualizer": "^2.3.9",
+    "sass": "^1.77.8"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start-visualizer\"",
+    "start-server": "cd server && npm start",
+    "start-visualizer": "cd visualizer && npm start"
   }
 }

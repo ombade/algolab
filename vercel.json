@@ -1,0 +1,22 @@
+{
+  "builds": [
+    {
+      "src": "server/**/*",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "visualizer/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "visualizer/$1"
+    }
+  ]
+}
